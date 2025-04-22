@@ -1,0 +1,32 @@
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.img-caption {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.img-caption > p {
+    font-weight: bold;
+    text-align: center;
+}
+
+.img-caption > img {
+    margin-bottom: 1rem;
+}
+
+.close-out-sale {
+    color: red;
+    text-align: center;
+    font-size: 2rem;
+    animation: blink 1s infinite;
+}
