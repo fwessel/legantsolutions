@@ -5,7 +5,7 @@
     text-align: center;
 }
 
-.left-right-container {
+.left-right-container, .center {
     width: 100%;
 }
 
