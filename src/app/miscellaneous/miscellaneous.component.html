@@ -1,1 +1,72 @@
-<p>miscellaneous works!</p>
+<app-page-container>
+    <h1 class="title">Miscellaneous Components</h1>
+
+    <p class="downloads">
+        Downloads:
+        <br/>
+        <a href="pdfs/Discharge_Sticks.pdf" target="_blank">Discharge Sticks</a>
+        <br/>
+        <a href="pdfs/Connectors_Single.pdf" target="_blank">HV Connectors</a>
+        <br/>
+        <a href="pdfs/Surge_Arrestors.pdf" target="_blank">Surge Arrestors</a>
+        <br/>
+        <a href="pdfs/2024-Zeonics-Systech-Catalog.pdf" target="_blank">Complete Product Catalog</a>
+    </p>
+
+    <hr/>
+
+    <p>JUMP TO:</p>
+    <a class="jump-link" (click)="this.navService.jumpTo('miscellaneous-1')">Pulsed Current Sensing Transformers</a>
+    <a class="jump-link" (click)="this.navService.jumpTo('miscellaneous-2')">High Voltage Connectors</a>
+    <a class="jump-link" (click)="this.navService.jumpTo('miscellaneous-3')">HV Discharge Stick</a>
+    <a class="jump-link" (click)="this.navService.jumpTo('miscellaneous-4')">Surge Arrester</a>
+    <a class="jump-link" (click)="this.navService.jumpTo('miscellaneous-5')">E-field Probe Sensor</a>
+
+    <hr/>
+
+    <app-showcase class="showcase-list-item" id="miscellaneous-1">
+        <h2 top>Pulsed Current Sensing Transformers</h2>
+        <div center>
+            <img src="images/miscellaneous_item1.png"/>
+        </div>
+    </app-showcase>
+
+    <hr/>
+
+    <app-showcase class="showcase-list-item" id="miscellaneous-2">
+        <h2 top>High Voltage Connectors</h2>
+        <div center>
+            <img src="images/miscellaneous_item2.png"/>
+        </div>
+    </app-showcase>
+
+    <hr/>
+
+    <app-showcase class="showcase-list-item" id="miscellaneous-3">
+        <h2 top>HV Discharge Stick</h2>
+        <div center>
+            <img src="images/miscellaneous_item3.png"/>
+        </div>
+    </app-showcase>
+
+    <hr/>
+
+    <app-showcase class="showcase-list-item" id="miscellaneous-4">
+        <h2 top>Surge Arrester</h2>
+        <div center>
+            <img src="images/miscellaneous_item4.png"/>
+        </div>
+    </app-showcase>
+
+    <hr/>
+
+    <app-showcase class="showcase-list-item" id="miscellaneous-5">
+        <h2 top>E-field Probe Sensor</h2>
+        <div center>
+            <img src="images/miscellaneous_item5.png"/>
+        </div>
+    </app-showcase>
+
+    <hr/>
+    
+</app-page-container>
