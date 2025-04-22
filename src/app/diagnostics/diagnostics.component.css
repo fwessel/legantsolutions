@@ -30,3 +30,11 @@
     font-size: 2rem;
     animation: blink 1s infinite;
 }
+
+.references {
+    font-weight: bold;
+}
+
+.reference {
+    margin: 0px;
+}
