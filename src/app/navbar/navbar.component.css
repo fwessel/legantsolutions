@@ -37,3 +37,14 @@ button {
     background-color: #333;
     border: none;
 }
+
+/*
+[dropdown]:hover .dropdown-menu,
+[dropdown]:focus-within .dropdown-menu {
+    display: block;
+}
+*/
+
+.dropdown-menu {
+    margin-top: 3.5rem;
+}
