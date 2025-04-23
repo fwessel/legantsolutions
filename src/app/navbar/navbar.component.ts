@@ -16,19 +16,22 @@ export class NavbarComponent {
 
   @HostListener('document:click', ['$event'])
   onComponentsClick(event: MouseEvent) {
-    this.onComponentsClickAndHover(event);
+    if (this.componentsDropdownBtn?.nativeElement.contains(event.target) && window.innerWidth >= 768) {
+      this.navService.navTo('components');
+    }
+    this.updateComponentsDropdownVisibility(event);
   }
 
   @HostListener('document:mousemove', ['$event'])
   onComponentsHover(event: MouseEvent) {
-    this.onComponentsClickAndHover(event);
+    this.updateComponentsDropdownVisibility(event);
   }
 
-  onComponentsClickAndHover(event: MouseEvent) {
+  updateComponentsDropdownVisibility(event: MouseEvent) {
     this.isComponentsDropdownOpen = 
       this.componentsDropdownMenu?.nativeElement.contains(event.target)
       || this.componentsDropdownBtn?.nativeElement.contains(event.target)
   }
-
+  
   constructor(public navService: NavigationService) {}
 }

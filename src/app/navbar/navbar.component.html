@@ -3,11 +3,11 @@
     <a href="diagnostics">Diagnostics </a>
     <a href="systems">Systems</a>
     <div class="btn-group" dropdown>
-        <button #componentsDropdownBtn (click)="this.navService.navTo('components')" id="button-basic" type="button" class="dropdown-toggle" aria-controls="dropdown-basic">
+        <button #componentsDropdownBtn id="button-basic" type="button" class="dropdown-toggle" aria-controls="dropdown-basic">
             Components <span class="caret"></span>
         </button>
         <div #componentsDropdownMenu id="dropdown-basic" class="dropdown-menu" role="menus" aria-labelledby="button-basic" [style.display]="isComponentsDropdownOpen ? 'block' : 'none'">
-            <p role="menuitem" (click)="this.navService.navTo('components')">All Components</p>
+            <p role="menuitem" (click)="this.navService.navTo('components')">Components</p>
             <hr/>
             <p role="menuitem" (click)="this.navService.navTo('components/capacitors')">Capacitors</p>
             <p role="menuitem" (click)="this.navService.navTo('components/diodes')">Diodes</p>
