@@ -1,9 +1,16 @@
-img {
-    width: 450px;
+.layout-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 footer {
     background-color: #fafafa;
     padding: 3rem 1.5rem 6rem;
     text-align: center;
+    margin-top: auto;
+}
+
+img {
+    width: 450px;
 }

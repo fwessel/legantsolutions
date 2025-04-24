@@ -1,1 +1,70 @@
-<p>contact works!</p>
+<app-page-container>
+    <h1 class="title">How can we help you change the world?</h1>
+
+    <hr/>
+    
+    <div class="row">
+        <div class="col-md-4 einstein-container">
+            <img src="images/EinsteinLaughing.png"/>
+        </div>
+        <div class="col-md-8">
+            <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+            <form 
+                id="gform" 
+                method="POST" 
+                action="https://script.google.com/macros/s/AKfycbzp6lfoHn_2HNuZ-Z8fKlnimJCaZp9SBsFCr_nAJJUemA8LSRUJ/exec"
+                [formGroup]="contactForm" 
+                (submit)="onSubmit()" 
+                data-email="from_email@example.com" 
+                target="dummyframe" 
+            >
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="name" class="top">Name</label>
+                        <input type="text" name="name" formControlName="name" placeholder="Albert Einstein" class="form-control"/>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="company" class="top">Company</label>
+                        <input type="text" name="company" formControlName="company" placeholder="The University of Zurich" class="form-control"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="email" class="top">E-mail</label>
+                        <input type="text" name="email" formControlName="email" placeholder="albert@gmail.com" class="form-control"/>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="phone" class="top">Phone</label>
+                        <input type="text" name="phone" formControlName="phone" placeholder="555-555-5555" class="form-control"/>
+                    </div>
+                </div>
+
+                <label for="reason">Reason for contacting us (300 characters max):</label>
+                <select name="reason" formControlName="reason">
+                    <option>Product Quote</option>
+                    <option>Product Inquiry</option>
+                    <option>General Message</option>
+                    <option>Other</option>
+                </select>
+                <textarea formControlName="message" placeholder="I want to prove relativity!" class="form-control"></textarea>
+                <div class="submit-button-container">
+                    <button type="submit" class="btn">Submit</button>
+                    {{submitted ? "We'll be in touch. Thanks!" : ""}}
+                </div>
+               
+            </form>
+        </div>
+    </div>
+
+    <hr/>
+    
+    <!-- 
+    Uncomment to show inputs (for testing purposes) 
+    <p>Name: {{contactForm.value.name}}</p>
+    <p>Company: {{contactForm.value.company}}</p>
+    <p>E-mail: {{contactForm.value.email}}</p>
+    <p>Phone: {{contactForm.value.phone}}</p>
+    <p>Reason: {{contactForm.value.reason}}</p>
+    <p>Message: {{contactForm.value.message}}</p>
+    -->
+</app-page-container>
