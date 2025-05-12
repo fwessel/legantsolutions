@@ -10,6 +10,9 @@ import {FormGroup, FormControl, ReactiveFormsModule, Validators} from '@angular/
 })
 export class ContactComponent {
   submitted = false;
+
+  // This FormGroup isn't actually used inside the html
+  // Because binding the form to the group causes formspree to not work (for whatever reason)
   contactForm = new FormGroup({
     name: new FormControl(''),
     email: new FormControl(''),

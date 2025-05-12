@@ -7,46 +7,42 @@
         <div class="col-md-4 einstein-container">
             <img src="images/EinsteinLaughing.png"/>
         </div>
+        
         <div class="col-md-8">
             <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
             <form
-                id="gform"
                 method="POST"
-                action="https://script.google.com/macros/s/AKfycbzp6lfoHn_2HNuZ-Z8fKlnimJCaZp9SBsFCr_nAJJUemA8LSRUJ/exec"
-                [formGroup]="contactForm"
-                (submit)="onSubmit()"
-                data-email="from_email@example.com"
-                target="dummyframe"
+                action="https://formspree.io/f/xzzrrpdk"
             >
                 <div class="row">
                     <div class="col-md-6">
                         <label for="name" class="top">Name</label>
-                        <input type="text" name="name" formControlName="name" placeholder="Albert Einstein" class="form-control"/>
+                        <input type="text" name="name" placeholder="Albert Einstein" class="form-control"/>
                     </div>
                     <div class="col-md-6">
                         <label for="company" class="top">Company</label>
-                        <input type="text" name="company" formControlName="company" placeholder="Humboldt-Universität zu Berlin" class="form-control"/>
+                        <input type="text" name="company" placeholder="Humboldt-Universität zu Berlin" class="form-control"/>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <label for="email" class="top">E-mail</label>
-                        <input type="text" name="email" formControlName="email" placeholder="Einstein@beyond_infinity.com" class="form-control"/>
+                        <input type="text" name="email" placeholder="Einstein@beyond_infinity.com" class="form-control"/>
                     </div>
                     <div class="col-md-6">
                         <label for="phone" class="top">Phone</label>
-                        <input type="text" name="phone" formControlName="phone" placeholder="1-800-123-4567" class="form-control"/>
+                        <input type="text" name="phone" placeholder="1-800-123-4567" class="form-control"/>
                     </div>
                 </div>
 
                 <label for="reason">Reason for contacting us:</label>
-                <select name="reason" formControlName="reason">
+                <select name="reason">
                     <option>Product Quote</option>
                     <option>Product Inquiry</option>
                     <option>General Message</option>
                     <option>Other</option>
                 </select>
-                <textarea formControlName="message" placeholder="I proved the photo-electric effect!" class="form-control"></textarea>
+                <textarea name="message" placeholder="I proved the photo-electric effect!" class="form-control"></textarea>
                 <div class="submit-button-container" select>
                     <button type="submit" class="btn">Submit</button>
                     {{submitted ? "We'll be in touch. Thanks!" : ""}}
