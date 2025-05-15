@@ -5,14 +5,13 @@
 
     <div class="row">
         <div class="col-md-4 einstein-container">
-            <img src="images/EinsteinLaughing.png"/>
+            <img src="../public/images/EinsteinLaughing.png" alt="../public/images/EinsteinLetter.png">
         </div>
 
         <div class="col-md-8">
             <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
             <form
                 method="POST"
-<!--                action="https://formspree.io/f/xzzrrpdk"-->
                 action="https://formspree.io/f/xldbayno"
             >
                 <div class="row">
@@ -45,7 +44,8 @@
                 </select>
                 <textarea name="message" placeholder="I proved the photo-electric effect!" class="form-control"></textarea>
                 <div class="submit-button-container" select>
-                    <button type="submit" class="btn">Submit</button>
+                  <button type="submit">Send</button>
+<!--                    <button type="submit" class="btn">Submit</button>-->
                     {{submitted ? "We'll be in touch. Thanks!" : ""}}
                 </div>
 
