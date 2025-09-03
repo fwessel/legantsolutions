@@ -22,6 +22,7 @@ export const routes: Routes = [
                 path: '',
                 component: HomeComponent,
             },
+            /*
             {
                 path: 'systems',
                 loadComponent: () => import('./systems/systems.component').then(m => m.SystemsComponent)
@@ -58,6 +59,7 @@ export const routes: Routes = [
                 path: 'diagnostics',
                 loadComponent: () => import('./diagnostics/diagnostics.component').then(m => m.DiagnosticsComponent)
             },
+            */
             {
                 path: 'contact',
                 loadComponent: () => import('./contact/contact.component').then(m => m.ContactComponent)
